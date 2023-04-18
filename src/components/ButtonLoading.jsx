@@ -7,7 +7,7 @@ const ButtonLoading = () => {
     <button
       disabled
       type="button"
-      className="bg-gradient-to-r from-thOrange to-thBlue py-2 px-6 text-black rounded-lg "
+      className="bg-gradient-to-r from-[#182C60] to-[#ffd7d7] py-2 px-6 text-black rounded-lg "
     >
       <div className="flex items-center justify-center gap-5">
         <svg
@@ -26,8 +26,6 @@ const ButtonLoading = () => {
             fill="currentColor"
           />
         </svg>
-
-        <GiRollerSkate size={30} fill={black} />
       </div>
     </button>
   );

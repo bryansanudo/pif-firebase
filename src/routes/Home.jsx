@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <>
-      <Title text="Proximo Evento... ruta principiantes miercoles-15" />
+      <Title text="Usuarios Registrados" />
 
       <div className="md:max-w-screen-xl mx-auto h-fit grid grid-cols-1  gap-10 justify-center px-6">
         {/*  <div className="col-span-1 h-[500px] flex items-center mx-4">
@@ -104,7 +104,7 @@ const Home = () => {
           {data.map((item) => (
             <div
               key={item.nanoid}
-              className="p-6 rounded-lg shadow-md shadow-gray-200  "
+              className="p-6 rounded-lg shadow-md shadow-gray-200 flex items-center flex-col w-[300px] mx-auto  "
             >
               {/* <div className="flex justify-end mb-2">
                 {auth.currentUser.uid === item.uid && (
@@ -124,7 +124,10 @@ const Home = () => {
                 {item.name}
               </textarea> */}
 
-              <p className=" font-bold capitalize text-thOrange">{item.name}</p>
+              <p className=" font-bold capitalize text-gray-400 mb-6">
+                {item.name}
+              </p>
+              <img src="/user.png" alt="" className="h-20" />
             </div>
           ))}
         </div>
