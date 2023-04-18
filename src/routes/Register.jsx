@@ -59,7 +59,7 @@ const Register = () => {
           placeholder="Ingresa tu nombre"
           {...register("userName", {
             required,
-            pattern: patternEmail,
+            /* pattern: patternEmail, */
           })}
           error={errors.email}
         >
@@ -71,7 +71,7 @@ const Register = () => {
           placeholder="Ingresa tus ingresos mensuales"
           {...register("income", {
             required,
-            pattern: patternEmail,
+            /* pattern: patternEmail, */
           })}
           error={errors.email}
         >
@@ -82,7 +82,7 @@ const Register = () => {
           placeholder="Ingresa tu correo"
           {...register("email", {
             required,
-            pattern: patternEmail,
+            /* pattern: patternEmail, */
           })}
           label="Correo"
           error={errors.email}
