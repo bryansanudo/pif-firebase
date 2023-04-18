@@ -64,8 +64,8 @@ const Home = () => {
     <>
       <Title text="Proximo Evento... ruta principiantes miercoles-15" />
 
-      <div className="md:max-w-screen-xl mx-auto h-fit grid grid-cols-1 md:grid-cols-3 gap-10 justify-center px-6">
-        <div className="col-span-1 h-[500px] flex items-center mx-4">
+      <div className="md:max-w-screen-xl mx-auto h-fit grid grid-cols-1  gap-10 justify-center px-6">
+        {/*  <div className="col-span-1 h-[500px] flex items-center mx-4">
           <div className="  w-[380px] md:w-[280px]  h-min  md:fixed   ">
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -98,15 +98,15 @@ const Home = () => {
               )}
             </form>
           </div>
-        </div>
+        </div> */}
 
-        <div className="col-span-1 md:col-span-2 flex flex-col gap-8  ">
+        <div className=" flex flex-col gap-8  ">
           {data.map((item) => (
             <div
               key={item.nanoid}
               className="p-6 rounded-lg shadow-md shadow-gray-200  "
             >
-              <div className="flex justify-end mb-2">
+              {/* <div className="flex justify-end mb-2">
                 {auth.currentUser.uid === item.uid && (
                   <Button
                     type="button"
@@ -114,19 +114,15 @@ const Home = () => {
                     loading={loading[item.nanoid]}
                     onClick={() => handleClickDelete(item.nanoid)}
                   />
-                  /*  <Button
-                type="button"
-                text="Edit"
-                onClick={() => handleClickEdit(item)}
-                /> */
+                 
                 )}
-              </div>
-              <textarea
+              </div> */}
+              {/* <textarea
                 readOnly
-                className="mb-3  font-medium text-gray-700 w-full rounded-lg cursor-default focus:border-black focus:ring-black h-32 md:h-10"
+                className="mb-3 font-medium text-gray-700 w-full rounded-lg cursor-default focus:border-black focus:ring-black h-32 md:h-10"
               >
-                {item.origin}
-              </textarea>
+                {item.name}
+              </textarea> */}
 
               <p className=" font-bold capitalize text-thOrange">{item.name}</p>
             </div>

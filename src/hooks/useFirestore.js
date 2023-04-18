@@ -21,7 +21,7 @@ export const useFirestore = () => {
     //console.log(auth.currentUser);
     try {
       setLoading((prev) => ({ ...prev, getData: true }));
-      const querySnapshot = await getDocs(collection(db, "urls"));
+      const querySnapshot = await getDocs(collection(db, "names"));
       const dataDB = querySnapshot.docs.map((doc) => doc.data());
       setData(dataDB);
     } catch (error) {
@@ -62,7 +62,7 @@ export const useFirestore = () => {
         uid: auth.currentUser.uid,
       };
 
-      const docRef = doc(db, "urls", newDoc.nanoid);
+      const docRef = doc(db, "names", newDoc.nanoid);
       await setDoc(docRef, newDoc);
       setData([...data, newDoc]);
     } catch (error) {
@@ -75,7 +75,7 @@ export const useFirestore = () => {
   const deleteData = async (nanoid) => {
     try {
       setLoading((prev) => ({ ...prev, [nanoid]: true }));
-      const docRef = doc(db, "urls", nanoid);
+      const docRef = doc(db, "names", nanoid);
       await deleteDoc(docRef);
       setData(data.filter((item) => item.nanoid !== nanoid));
     } catch (error) {
@@ -89,7 +89,7 @@ export const useFirestore = () => {
   const updateData = async (nanoid, newOrigin) => {
     try {
       setLoading((prev) => ({ ...prev, updateData: true }));
-      const docRef = doc(db, "urls", nanoid);
+      const docRef = doc(db, "names", nanoid);
       await updateDoc(docRef, { origin: newOrigin });
       setData(
         data.map((item) =>

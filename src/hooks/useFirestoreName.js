@@ -14,7 +14,8 @@ export const useFirestoreName = () => {
 
       const newDoc = {
         nanoid: nanoid(6),
-        name: url,
+        name: url.userName,
+        income: url.income,
         uid: auth.currentUser.uid,
       };
 

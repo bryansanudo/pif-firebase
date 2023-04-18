@@ -28,13 +28,13 @@ const Register = () => {
     setError,
   } = useForm({});
 
-  const onSubmit = async ({ email, password, userName }) => {
+  const onSubmit = async ({ email, password, userName, income }) => {
     try {
       setLoading(true);
       await registerUser(email, password);
 
       console.log("Usuario Creado");
-      await addData(userName);
+      await addData({ userName, income });
 
       navegate("/");
     } catch (error) {
@@ -58,6 +58,18 @@ const Register = () => {
           type="text"
           placeholder="Ingresa tu nombre"
           {...register("userName", {
+            required,
+            pattern: patternEmail,
+          })}
+          error={errors.email}
+        >
+          <FormError error={errors.email} />
+        </FormInput>
+        <FormInput
+          label="Ingresos"
+          type="text"
+          placeholder="Ingresa tus ingresos mensuales"
+          {...register("income", {
             required,
             pattern: patternEmail,
           })}
