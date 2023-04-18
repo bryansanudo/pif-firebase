@@ -16,21 +16,22 @@ const Navbar = () => {
   };
 
   const classButton =
-    "bg-gradient-to-r from-thOrange to-thBlue py-2  px-1 text-sm md:px-4 text-black rounded-lg duration-300 hover:scale-110";
+    "bg-gradient-to-r from-[#182C60] to-[#ffd7d7] py-2  px-1 text-sm md:px-4 text-white rounded-lg duration-300 hover:scale-110 ";
 
   return (
-    <nav className=" w-full h-24 bg-black text-white">
+    <nav className=" w-full h-30 bg-[#111827] text-white">
       <div className="container flex  justify-center items-center mx-auto gap-2 md:gap-4 p-5">
-        <a href="https://ingravity.netlify.app/">
-          <img
-            src={ingravityLogo}
-            className="rounded-full object-cover  w-12 h-12 md:w-16 md:h-16  shadow-thOrange hover:scale-110 duration-300 shadow-lg"
-          />
+        <a
+          href="https://pif-bsi-landing.vercel.app/"
+          className="hover:scale-105 hover:text-[#ffd7d7] duration-300"
+        >
+          Logo App
         </a>
-        <a href="https://ingravity.netlify.app/productos/patines">
+        <a href="https://pifsantiagoisabellabryan.vercel.app/">
           <img
-            src={rollerLogo}
-            className="rounded-full object-cover w-12 h-12 md:w-16 md:h-16 hover:scale-110 duration-300 shadow-lg shadow-thBlue"
+            src="/logoPoli.svg"
+            alt=""
+            className="rounded-full object-contain hover:scale-105 transition-300  md:h-24 md:w-24 h-20 w-20  duration-300    "
           />
         </a>
 
@@ -44,7 +45,7 @@ const Navbar = () => {
           ) : (
             <>
               <NavLink to="/login" className={classButton}>
-                Enter
+                Entrar
               </NavLink>
               <NavLink to="/register" className={classButton}>
                 Registrate

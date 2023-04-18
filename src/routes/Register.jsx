@@ -50,7 +50,7 @@ const Register = () => {
 
   return (
     <>
-      <Title text="Conviertete en miembro de Ingravity Roller" />
+      <Title text="¿Quieres mejorar tus Finanzas Personales?" />
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormInput
@@ -79,7 +79,7 @@ const Register = () => {
         </FormInput>
         <FormInput
           type="email"
-          placeholder="Ingrese tu correo"
+          placeholder="Ingresa tu correo"
           {...register("email", {
             required,
             pattern: patternEmail,
